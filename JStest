@@ -1,0 +1,28 @@
+const NFTs = []
+function mintNFT (_name,_haircolor,_age,_sibling){
+  const NFT = {
+    "name":_name,
+    "haircolor":_haircolor,
+    "age":_age,
+    "sibling":_sibling,
+  }
+  NFTs.push(NFT);
+  console.log("Minted:"+ _name);
+}
+function listNFTs (){
+  for(let i = 0 ; i < NFTs.length; i++) {
+  console.log("\nID : \t\t"+ (i+1));
+  console.log("name: \t\t" +NFTs[i].name);
+  console.log("haircolor: \t\t" +NFTs[i].haircolor);
+  console.log("age: \t\t" +NFTs[i].age);
+  console.log("sibling: \t\t" +NFTs[i].sibling);
+  }
+}
+function getTotalsupply(){
+  console.log("\n" + NFTs.length);
+}
+mintNFT("Simran","Black"," 22","1");
+mintNFT("Aman","Brown"," 25","2");
+mintNFT("Ankita","Red","19","2");
+listNFTs();
+getTotalsupply();
